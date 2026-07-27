@@ -1,0 +1,20 @@
+{
+  "name": "红红的个人工作台",
+  "short_name": "红红工作台",
+  "description": "创作 · 成长 · 财务管理 个人工作台",
+  "lang": "zh-CN",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f7f9",
+  "theme_color": "#4a7c59",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
