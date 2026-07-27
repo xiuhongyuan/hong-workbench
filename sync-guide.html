@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人工作台 · 同步设置图文指引</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f6f7f9; color: #1f2937; line-height: 1.7;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+    .hero {
+      background: linear-gradient(135deg, #4a7c59, #3d6a4b); color: #fff;
+      border-radius: 18px; padding: 36px 32px; margin-bottom: 32px;
+    }
+    .hero h1 { margin: 0 0 10px; font-size: 26px; }
+    .hero p { margin: 0; opacity: .92; font-size: 15px; }
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 8px; }
+    .compare .c {
+      background: #fff; border-radius: 14px; padding: 18px; box-shadow: 0 4px 12px rgba(0,0,0,.05);
+      border: 1px solid #e5e7eb;
+    }
+    .compare .c h3 { margin: 0 0 8px; font-size: 16px; }
+    .compare .c.rec { border-color: #4a7c59; box-shadow: 0 6px 18px rgba(74,124,89,.15); }
+    .badge { display: inline-block; font-size: 11px; background: #e8f3ec; color: #4a7c59; padding: 2px 8px; border-radius: 20px; margin-left: 6px; }
+    .section { background: #fff; border-radius: 16px; padding: 28px 28px 8px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,.04); }
+    .section > h2 { font-size: 21px; margin: 0 0 4px; display: flex; align-items: center; gap: 10px; }
+    .section > .sub { color: #6b7280; font-size: 14px; margin: 0 0 20px; }
+    .step { display: flex; gap: 16px; margin-bottom: 26px; }
+    .step .num {
+      flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #4a7c59; color: #fff;
+      display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;
+    }
+    .step .body { flex: 1; }
+    .step h4 { margin: 4px 0 6px; font-size: 16px; }
+    .step p { margin: 0 0 10px; font-size: 14px; color: #374151; }
+    .note { background: #fff7ed; border-left: 4px solid #f59e0b; padding: 12px 14px; border-radius: 8px; font-size: 13px; color: #92400e; margin: 8px 0 0; }
+    .tip { background: #eef2ff; border-left: 4px solid #6366f1; padding: 12px 14px; border-radius: 8px; font-size: 13px; color: #3730a3; margin: 8px 0 0; }
+    .mock { border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; margin: 12px 0; background: #fbfcfd; }
+    .mock .bar { background: #eceff3; padding: 8px 12px; font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 6px; }
+    .mock .bar i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .mock svg { display: block; width: 100%; height: auto; }
+    ul.clean { margin: 6px 0 0; padding-left: 20px; font-size: 14px; color: #374151; }
+    ul.clean li { margin-bottom: 4px; }
+    a.link { color: #4a7c59; font-weight: 600; }
+    .footer { text-align: center; color: #9ca3af; font-size: 12px; margin-top: 30px; }
+    @media (max-width: 640px) { .compare { grid-template-columns: 1fr; } .wrap { padding: 24px 14px 60px; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>📲 个人工作台 · 多端同步图文指引</h1>
+    <p>跟着图走，10 分钟内让手机和电脑数据互通，并把工作台装成 APP 点图标即用。</p>
+  </div>
+
+  <div class="compare">
+    <div class="c rec">
+      <h3>① GitHub Gist <span class="badge">推荐</span></h3>
+      <p style="font-size:13px;color:#6b7280;margin:0;">免费、无需信用卡、最稳。需一个 GitHub 账号。</p>
+    </div>
+    <div class="c">
+      <h3>② jsonbin.io</h3>
+      <p style="font-size:13px;color:#6b7280;margin:0;">更简单（邮箱注册拿 Key），但国内偶尔不稳。</p>
+    </div>
+  </div>
+
+  <!-- 方式一 -->
+  <div class="section">
+    <h2>🟢 方式一：GitHub Gist（推荐）</h2>
+    <p class="sub">用 GitHub 的「代码片段(Gist)」当免费云盘，工作台自动读写它实现多端同步。</p>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="body">
+        <h4>注册 / 登录 GitHub 账号</h4>
+        <p>没有账号就先注册（免费，30 秒）。已有则直接登录。</p>
+        <ul class="clean">
+          <li>打开 <a class="link" href="https://github.com/signup" target="_blank">github.com/signup</a> 注册，或 <a class="link" href="https://github.com/login" target="_blank">github.com/login</a> 登录</li>
+          <li>记住用户名和密码（或用邮箱验证码登录）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div class="body">
+        <h4>打开「生成 Token」页面</h4>
+        <p>Token 相当于工作台访问你 Gist 的「钥匙」，只能在这里生成一次，生成后记得复制保存。</p>
+        <ul class="clean">
+          <li>登录后访问：<a class="link" href="https://github.com/settings/tokens" target="_blank">github.com/settings/tokens</a></li>
+          <li>点右上角绿色按钮 <b>「Generate new token」→「Generate new token (classic)」</b></li>
+        </ul>
+        <div class="mock">
+          <div class="bar"><i style="background:#ef4444"></i><i style="background:#f59e0b"></i><i style="background:#10b981"></i> github.com/settings/tokens</div>
+          <svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="260" fill="#fff"/>
+            <text x="32" y="52" font-family="sans-serif" font-size="22" font-weight="700" fill="#1f2937">Fine-grained tokens</text>
+            <text x="32" y="78" font-family="sans-serif" font-size="13" fill="#6b7280">Personal access tokens</text>
+            <rect x="32" y="110" width="736" height="1" fill="#e5e7eb"/>
+            <text x="32" y="150" font-family="sans-serif" font-size="14" fill="#6b7280">You don't have any classic tokens.</text>
+            <rect x="540" y="170" width="220" height="44" rx="8" fill="#1f883d"/>
+            <text x="560" y="198" font-family="sans-serif" font-size="15" fill="#fff" font-weight="600">+ Generate new token</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body">
+        <h4>填写 Token 信息（关键：勾选 gist 权限）</h4>
+        <p>按下图填写，重点是 <b>☑ gist</b> 一定要勾上，否则工作台无法读写。</p>
+        <ul class="clean">
+          <li>Note（备注）：填 <code>workbench-sync</code></li>
+          <li>Expiration（有效期）：选 <b>No expiration</b>（永不过期，省得以后重来）</li>
+          <li>下滑到 scopes，只勾 <b>gist</b> 这一项即可</li>
+          <li>拉到底点绿色 <b>「Generate token」</b></li>
+        </ul>
+        <div class="mock">
+          <div class="bar"><i style="background:#ef4444"></i><i style="background:#f59e0b"></i><i style="background:#10b981"></i> New personal access token</div>
+          <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="360" fill="#fff"/>
+            <text x="32" y="44" font-family="sans-serif" font-size="15" font-weight="700" fill="#1f2937">Note</text>
+            <rect x="32" y="56" width="736" height="40" rx="8" fill="#f3f4f6" stroke="#e5e7eb"/>
+            <text x="46" y="81" font-family="sans-serif" font-size="14" fill="#6b7280">workbench-sync</text>
+            <text x="32" y="124" font-family="sans-serif" font-size="15" font-weight="700" fill="#1f2937">Expiration</text>
+            <rect x="32" y="136" width="736" height="40" rx="8" fill="#fff" stroke="#e5e7eb"/>
+            <text x="46" y="161" font-family="sans-serif" font-size="14" fill="#374151">No expiration</text>
+            <text x="32" y="206" font-family="sans-serif" font-size="15" font-weight="700" fill="#1f2937">Select scopes</text>
+            <rect x="32" y="220" width="736" height="40" rx="8" fill="#f0fdf4" stroke="#4a7c59" stroke-width="2"/>
+            <rect x="46" y="234" width="14" height="14" rx="3" fill="#4a7c59"/>
+            <text x="70" y="246" font-family="sans-serif" font-size="14" fill="#1f2937" font-weight="600">☑ gist  Create gists</text>
+            <rect x="32" y="300" width="170" height="44" rx="8" fill="#1f883d"/>
+            <text x="52" y="328" font-family="sans-serif" font-size="15" fill="#fff" font-weight="600">Generate token</text>
+          </svg>
+        </div>
+        <div class="note">⚠️ 生成后页面只显示一次这串 <code>ghp_...</code> 字符，<b>立刻复制保存</b>到备忘录。关掉页面就再也看不到了。</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <div class="body">
+        <h4>填进工作台并测试</h4>
+        <p>回到工作台「⚙️ 数据同步」页面，按图操作：</p>
+        <ul class="clean">
+          <li>同步后端：选 <b>GitHub Gist</b></li>
+          <li>GitHub Token：粘贴刚才复制的 <code>ghp_...</code></li>
+          <li>Gist ID：<b>留空</b>（首次保存自动创建）</li>
+          <li>先点 <b>🔌 测试连接</b> → 看到「✅ GitHub 连接成功」说明钥匙有效</li>
+          <li>再点 <b>💾 保存配置</b> → 自动创建 Gist 并首次同步</li>
+        </ul>
+        <div class="mock">
+          <div class="bar"><i style="background:#ef4444"></i><i style="background:#f59e0b"></i><i style="background:#10b981"></i> 工作台 · 数据同步</div>
+          <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="300" fill="#fbfcfd"/>
+            <rect x="32" y="24" width="736" height="252" rx="12" fill="#f3f4f6"/>
+            <text x="52" y="54" font-family="sans-serif" font-size="13" fill="#6b7280">同步后端</text>
+            <rect x="52" y="64" width="696" height="36" rx="8" fill="#fff" stroke="#e5e7eb"/>
+            <text x="66" y="88" font-family="sans-serif" font-size="14" fill="#374151">GitHub Gist（更稳定，需 GitHub Token） ▾</text>
+            <text x="52" y="128" font-family="sans-serif" font-size="13" fill="#6b7280">GitHub Token（需 gist 权限）</text>
+            <rect x="52" y="138" width="696" height="36" rx="8" fill="#fff" stroke="#4a7c59" stroke-width="2"/>
+            <text x="66" y="162" font-family="sans-serif" font-size="13" fill="#9ca3af">ghp_xxxxxxxxxxxxxxxxxxxx</text>
+            <text x="52" y="200" font-family="sans-serif" font-size="13" fill="#6b7280">Gist ID（留空则首次保存时自动创建）</text>
+            <rect x="52" y="210" width="696" height="36" rx="8" fill="#fff" stroke="#e5e7eb"/>
+            <rect x="52" y="258" width="130" height="38" rx="8" fill="#4a7c59"/>
+            <text x="66" y="283" font-family="sans-serif" font-size="13" fill="#fff" font-weight="600">💾 保存配置</text>
+            <rect x="190" y="258" width="130" height="38" rx="8" fill="#fff" stroke="#e5e7eb"/>
+            <text x="204" y="283" font-family="sans-serif" font-size="13" fill="#374151">🔄 立即同步</text>
+            <rect x="328" y="258" width="130" height="38" rx="8" fill="#fff" stroke="#e5e7eb"/>
+            <text x="342" y="283" font-family="sans-serif" font-size="13" fill="#374151">🔌 测试连接</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <div class="body">
+        <h4>手机 / 其他设备同步</h4>
+        <p>在另一台设备打开同一个工作台链接，进入「⚙️ 数据同步」：</p>
+        <ul class="clean">
+          <li>同样选 GitHub Gist，粘贴<b>同一个 Token</b></li>
+          <li>这次把<b>自动生成的 Gist ID</b> 也填进去（在电脑端保存后，Gist ID 框里会出现一串字符，复制给它）</li>
+          <li>点「🔄 立即同步」→ 两边数据应完全一致</li>
+          <li>以后任意一端改了任务，约 1.5 秒后自动同步到另一端</li>
+        </ul>
+        <div class="tip">💡 提示：Gist ID 在保存配置后会出现在「Gist ID」输入框里，复制下来备用即可。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 方式二 -->
+  <div class="section">
+    <h2>🔵 方式二：jsonbin.io（更简单）</h2>
+    <p class="sub">只要一个邮箱就能拿到 Key，适合不想注册 GitHub 的情况。</p>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="body">
+        <h4>注册并拿到 API Key</h4>
+        <ul class="clean">
+          <li>打开 <a class="link" href="https://jsonbin.io" target="_blank">jsonbin.io</a> → 用邮箱注册 / 登录</li>
+          <li>登录后在 Dashboard 找到你的 <b>Secret API Key</b>（形如 <code>X-X-X-X-xxxx</code>）</li>
+          <li>复制这串 Key</li>
+        </ul>
+        <div class="mock">
+          <div class="bar"><i style="background:#ef4444"></i><i style="background:#f59e0b"></i><i style="background:#10b981"></i> jsonbin.io/dashboard</div>
+          <svg viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="150" fill="#fff"/>
+            <text x="32" y="46" font-family="sans-serif" font-size="14" font-weight="700" fill="#1f2937">Your Secret API Key</text>
+            <rect x="32" y="58" width="700" height="40" rx="8" fill="#f3f4f6" stroke="#e5e7eb"/>
+            <text x="46" y="83" font-family="monospace" font-size="13" fill="#374151">X-X-X-X-a1b2c3d4e5f6</text>
+            <rect x="620" y="100" width="112" height="34" rx="8" fill="#4a7c59"/>
+            <text x="638" y="123" font-family="sans-serif" font-size="13" fill="#fff" font-weight="600">复制 Key</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div class="body">
+        <h4>填进工作台</h4>
+        <ul class="clean">
+          <li>同步后端：选 <b>jsonbin.io</b></li>
+          <li>jsonbin API Key：粘贴 Key</li>
+          <li>Bin ID：<b>留空</b>（首次自动创建）</li>
+          <li>先「🔌 测试连接」→ 再「💾 保存配置」</li>
+        </ul>
+        <div class="note">⚠️ 国内网络偶尔连不上 jsonbin，若测试失败可换回 GitHub Gist 方式。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 装APP -->
+  <div class="section">
+    <h2>📱 把工作台装成 APP（点图标即用）</h2>
+    <p class="sub">装好后离线也能看历史内容，不用每次输网址。</p>
+    <div class="step">
+      <div class="num">1</div>
+      <div class="body">
+        <h4>电脑端（Edge / Chrome）</h4>
+        <p>打开工作台链接 → 右上角 ⋮ 或 ⋯ → 找到「应用 / 安装」→「将此站点作为应用安装」→ 桌面出现图标。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="body">
+        <h4>安卓（Chrome）</h4>
+        <p>点右上角 ⋮ →「添加到主屏幕」→ 命名「工作台」→ 主屏出现图标。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body">
+        <h4>iPhone（Safari）</h4>
+        <p>点底部「分享」按钮 → 上滑找到「添加到主屏幕」→ 主屏出现图标。</p>
+      </div>
+    </div>
+    <div class="note">📌 只要用同一个工作台链接安装，APP 图标打开的就是这份工作台，配合上面的云端同步，多端数据一致。</div>
+  </div>
+
+  <!-- 永久在线链接（加主屏） -->
+  <div class="section">
+    <h2>🌐 永久在线的主屏图标（推荐，不休眠）</h2>
+    <p class="sub">CloudStudio 沙箱会休眠，用它加主屏会失效。下面是已部署的永久在线链接（基于 GitHub Gist，永不休眠）。</p>
+    <div class="step">
+      <div class="num">1</div>
+      <div class="body">
+        <h4>用 iPhone 的 Safari 打开</h4>
+        <p>复制下面链接，在 <b>Safari</b>（不是微信）里打开：</p>
+        <p class="codebox">https://htmlpreview.github.io/?https%3A%2F%2Fgist.githubusercontent.com%2FXiuhongyuan%2F5b67c9bd69aac8fe7f12d457bdd2bdf4%2Fraw%2Findex.html</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="body">
+        <h4>添加到主屏幕</h4>
+        <p>点底部「分享」→「添加到主屏幕」→ 命名「红红工作台」→ 主屏出现图标。</p>
+        <div class="note">⚠️ 该链接走第三方 htmlpreview 代理，图标为代理默认样式。想要自定义图标 + 最稳，需把工作台部署到 <b>GitHub Pages</b>（要求 Token 有 repo 权限），详见下方「升级到 GitHub Pages」。</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body">
+        <h4>升级到 GitHub Pages（自定义图标、永不休眠）</h4>
+        <ul class="clean">
+          <li>去 <b>GitHub → Settings → Developer settings → Personal access tokens</b></li>
+          <li><b>删除</b>旧 Token，<b>重新生成</b>一个，权限<b>勾 repo</b>（全选 repo 类），过期选"永不过期"</li>
+          <li>把新 <code>ghp_xxx</code> 发给助手 → 自动建仓库、开 Pages</li>
+          <li>得到 <code>https://xiuhongyuan.github.io/仓库名/</code> 永久链接 → Safari 加主屏即自定义图标 APP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机打开单文件 -->
+  <div class="section">
+    <h2>📲 手机怎么打开「红红的个人工作台.html」</h2>
+    <p class="sub">单文件版发到手机后，按机型用下面正确方式打开（之前的图文里 iPhone 走法有误，这里更正）。</p>
+
+    <h3>第一步：把文件传到手机</h3>
+    <ul class="clean">
+      <li><b>微信</b>：电脑微信 → 文件传输助手 → 把 <code>红红的个人工作台.html</code> 拖进去发给自己 → 手机微信收到</li>
+      <li><b>QQ / 网盘</b>：同理发"我的手机"或存百度网盘 / 微云</li>
+      <li><b>数据线</b>：连电脑 → 拷到手机"内部存储"任意文件夹</li>
+    </ul>
+
+    <h3>第二步：在手机上打开</h3>
+
+    <div class="step">
+      <div class="num">A</div>
+      <div class="body">
+        <h4>🤖 安卓（最省事）</h4>
+        <p>微信里点开文件 → 右上角 <b>⋮</b> → <b>用其他应用打开</b> → 选 <b>Chrome / 系统浏览器</b>；或直接在"文件管理"App 里找到该文件点开。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">B</div>
+      <div class="body">
+        <h4>🍎 iPhone —— 直接点开（推荐，无需联网）</h4>
+        <p>微信里长按文件 → <b>存储到"文件"</b> → 打开 iPhone 自带 <b>"文件"</b> App → 找到 <code>红红的个人工作台.html</code> → <b>直接点它</b>，iOS 会直接渲染打开，功能完整、离线可用。</p>
+        <div class="note">⚠️ 别用"共享 → Safari"这一路：iPhone 不会把本地 HTML 列为 Safari 可打开目标，所以没有 Safari 选项。直接用"文件"App 点开即可。</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">C</div>
+      <div class="body">
+        <h4>🍎 iPhone —— 共享到"图书"</h4>
+        <p>"文件"App 里长按该 HTML → <b>共享</b> → 在列表里找 <b>"图书"</b>（Books，不是 Safari）→ 点开后图书会正常显示网页内容。</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">D</div>
+      <div class="body">
+        <h4>🍎 iPhone —— 想要主屏图标（必须走网址）</h4>
+        <p>iOS 规定只有"在 <b>Safari 打开一个网址</b>"才能<b>添加到主屏幕</b>，本地文件做不到。所以想要主屏 APP 图标，请用云端链接：</p>
+        <ul class="clean">
+          <li>在 <b>Safari</b>（不是微信）里打开工作台云端链接</li>
+          <li>底部 <b>分享</b> 按钮 → 上滑找到 <b>"添加到主屏幕"</b> → 主屏出现图标</li>
+          <li>云端链接会休眠，但加到主屏的图标指向它，链接有效时即可用</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">🔁 一个数据提醒：单文件版的数据只存在"当前这台手机的这个浏览器"里。换浏览器、清缓存、换设备都会丢；要互通请到工作台左侧「⚙️ 数据同步」填 GitHub Token，或用"导出 / 导入备份"手动传。</div>
+  </div>
+
+  <!-- 兜底 -->
+  <div class="section">
+    <h2>🛟 不联网也能用：手动备份（兜底）</h2>
+    <p class="sub">不想用任何云服务？用这个方式同样能手机电脑互通，数据完全在自己手里。</p>
+    <ul class="clean">
+      <li>电脑上「⚙️ 数据同步」→ 点 <b>📤 导出备份</b>，得到一个 JSON 文件</li>
+      <li>把文件发到微信文件传输助手 / 百度网盘</li>
+      <li>手机打开工作台 →「📥 导入备份」→ 选这个文件 → 数据立刻一致</li>
+    </ul>
+  </div>
+
+  <div class="footer">图文指引 · 个人工作台 · 言之有物 &nbsp;|&nbsp; 建议配合云端链接使用：https://b350975566284cebbc66353c1b791c05.app.codebuddy.work</div>
+
+</div>
+</body>
+</html>
